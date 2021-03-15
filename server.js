@@ -12,9 +12,16 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+else {app.use(express.static("client/public"))}
 // Add routes, both API and view
 app.use(routes);
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
+require("./routes/api/index.js")
+require("./routes/api/user-api-routes.js")
+require("./routes/api/userposts.js")
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/novice_code_community");
 
