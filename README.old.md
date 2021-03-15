@@ -1,1 +1,0 @@
-# novice_code_community
