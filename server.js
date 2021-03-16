@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+const passport = require("passport");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -19,9 +20,9 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-require("./routes/api/index.js")
-require("./routes/api/user-api-routes.js")
-require("./routes/api/userposts.js")
+require("./routes/api/index.js");
+require("./routes/api/userposts.js");
+// require("./routes/api/user-api-routes.js"); <------ this might need to be exported in it's file, I'm not sure.
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/novice_code_community");
 
