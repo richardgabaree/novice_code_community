@@ -7,7 +7,18 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+<<<<<<< HEAD
+    "passport": "^0.4.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "-": "0.0.1",
+=======
     "axios": "^0.18.0",
+>>>>>>> ba6901ae55657c8b4f6a3cc842daeb8b58f92301
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "concurrently": "^6.0.0",
